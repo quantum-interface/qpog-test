@@ -1,38 +1,34 @@
 .App {
-  text-align: center;
+  margin: 60px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh; /* Ensure the container takes the full viewport height */
+}
+.tiles {
+  height: calc(100vh - 100px); /* Subtract the height of the header from the viewport height */
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to create rows */
+  margin-right: 40%;
 }
 
-.App-link {
-  color: #61dafb;
+.tiles-img {
+  flex: 1 0 35%; /* Equal width for each image */
+  margin: 15px; /* Add spacing between images (optional) */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tiles-img:hover {
+  transform: scale(1.3); /* Increase size by 20% on hover */
+}
+
+.display-img{
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+}
+.ImageContainer {
+}
+.attach{
+  visibility: visible !important;
 }
